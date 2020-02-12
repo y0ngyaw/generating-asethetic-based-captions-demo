@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FYP Demo</title>
+
+	<!-- Load CSS files -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href={{ url_for('static', filename='css/main.css') }}>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class='container'>
+		<h3>Generating Aesthetic-Based Captions for Photographs</h3>
+	</div>
+	
+	<div class='container content'>
+		<div class='row content-row'>
+			<div class='col left-col'>
+				<form id='image-form'>
+					<div class='form-group'>
+						<label class='btn btn-default' id='browse-btn'>
+							Select From Folder<input class='img-upload-field' type="file" name="image" accept="image/*" hidden>
+						</label>
+					</div>
+				</form>
+				<img id='preview' class='preview' src={{ url_for('static', filename='images/img1.jpg') }}></img>
+				<img id='preview' class='preview' src={{ url_for('static', filename='images/img2.jpg') }}></img>
+				<img id='preview' class='preview' src={{ url_for('static', filename='images/img3.jpg') }}></img>
+				<img id='preview' class='preview' src={{ url_for('static', filename='images/img4.jpg') }}></img>
+				<img id='preview' class='preview' src={{ url_for('static', filename='images/img5.jpg') }}></img>
+				<img id='preview' class='preview' src={{ url_for('static', filename='images/img6.jpg') }}></img>
+				<img id='preview' class='preview' src={{ url_for('static', filename='images/img7.jpg') }}></img>
+				<img id='preview' class='preview' src={{ url_for('static', filename='images/img8.jpg') }}></img>
+				<img id='preview' class='preview' src={{ url_for('static', filename='images/img9.jpg') }}></img>
+				<img id='preview' class='preview' src={{ url_for('static', filename='images/img10.jpg') }}></img>
+			</div>
+			<div class='col right-col'>
+				<div class='container image-container'>
+					<img id='input-image'>
+				</div>
+				<div class='row justify-content-between captions' id='captions'>
+					<!--
+					<div class='col'>
+						<div class="card">
+							<div class="card-body">
+								This is some text within a card body.
+							</div>
+						</div>
+					</div>-->
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<div class='ack'>
+		<p>Presented by Yeo Yong Yaw. Project supervised by Dr. John See Su Yang and co-supervised by Dr. Wong Lai Kuan. Moderated by Dr.Goh Hui Ngo.</p>
+	</div>
+
+	<div class='overlay' id='overlay'>
+		<!-- Loader 7 -->
+
+		<svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		  viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+ 			<path fill="#fff" d="M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3 c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z">
+		      <animateTransform 
+				attributeName="transform" 
+				attributeType="XML" 
+				type="rotate"
+				dur="2s" 
+				from="0 50 50"
+				to="360 50 50" 
+				repeatCount="indefinite" />
+			</path>
+ 			<path fill="#fff" d="M42.3,39.6c5.7-4.3,13.9-3.1,18.1,2.7c4.3,5.7,3.1,13.9-2.7,18.1l4.1,5.5c8.8-6.5,10.6-19,4.1-27.7 c-6.5-8.8-19-10.6-27.7-4.1L42.3,39.6z">
+  				<animateTransform 
+					attributeName="transform" 
+					attributeType="XML" 
+					type="rotate"
+					dur="1s" 
+					from="0 50 50"
+					to="-360 50 50" 
+					repeatCount="indefinite" />
+				</path>
+			<path fill="#fff" d="M82,35.7C74.1,18,53.4,10.1,35.7,18S10.1,46.6,18,64.3l7.6-3.4c-6-13.5,0-29.3,13.5-35.3s29.3,0,35.3,13.5 L82,35.7z">
+				<animateTransform 
+					attributeName="transform" 
+					attributeType="XML" 
+					type="rotate"
+					dur="2s" 
+					from="0 50 50"
+					to="360 50 50" 
+					repeatCount="indefinite" />
+			</path>
+		</svg>
+	</div>
+
+	<!--<img id='preview' class='preview' src={{ url_for('static', filename='images/img1.jpg') }}></img>-->
+
+	<script src={{ url_for('static', filename='js/main.js') }}></script>
+</body>
+</html>
